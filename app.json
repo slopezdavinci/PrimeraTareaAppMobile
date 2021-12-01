@@ -3,9 +3,10 @@
     "name": "PrimerEntrega",
     "slug": "PrimerEntrega",
     "version": "1.0.0",
+    "scheme": "mycoolredirect",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "PrimerEntrega"
+  "name": "PrimerEntrega"  
 }

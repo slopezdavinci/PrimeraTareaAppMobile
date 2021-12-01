@@ -1,13 +1,20 @@
-import React from 'react';
-import { Navigation } from './navigation/Navigation';
-import { NavigationContainer } from '@react-navigation/native';
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
+import React, { useState } from "react";
+import { Navigator } from "./navigator/navigator";
+import { AuthContext } from "./context/AuthContext";
 
-export default function App() {
+const { Provider } = AuthContext;
+
+export default function App() { 
+  
+  const [userInfo, setUserInfo] = useState([]);
+  const [auth, setAuth] = useState([]);
+  
   return (
-    <NavigationContainer>      
-        <Navigation />           
-    </NavigationContainer>
+    <Provider
+      value={{userInfo, setUserInfo, auth, setAuth}}
+    >
+      <Navigator />
+    </Provider>
   );
 }
-
